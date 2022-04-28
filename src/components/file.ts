@@ -81,7 +81,7 @@ export class PrismaClassFile implements Echoable {
 		const generator = PrismaClassGenerator.getInstance()
 		this.prismaClass.relationTypes.forEach((relationClassName) => {
 			this.registerImport(
-				`${pascalCase(relationClassName)}`,
+				`${relationClassName}`,
 				PrismaClassFile.TEMP_PREFIX + relationClassName,
 			)
 		})
